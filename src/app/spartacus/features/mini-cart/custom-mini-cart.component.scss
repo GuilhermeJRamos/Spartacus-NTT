@@ -1,0 +1,32 @@
+#customMiniCart {
+    position: relative; 
+    color: #ffffff;
+    text-decoration: none; 
+    background: none;
+}
+
+#customMiniCart:hover {
+    color: #ff0000;
+}
+
+#icon {
+    font-size: 24px; 
+    margin-right: 8px; 
+}
+
+.cart-badge {
+    position: absolute;
+    top: -20px; /* Mover o distintivo acima do ícone */
+    right: 50px;
+    background-color: #ff0000;
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+
+.total {
+    font-size: 14px; 
+}
