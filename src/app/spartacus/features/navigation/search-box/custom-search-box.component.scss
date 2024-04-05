@@ -1,10 +1,6 @@
 .searchbox {
-    position: relative;
-    display: flex;
-    align-items: center;
     border: 1px solid #ccc;
     border-radius: 20px; 
-    padding: 5px 10px;
   }
   
   .searchbox input {
@@ -12,7 +8,6 @@
     border: none;
     outline: none;
     font-size: 16px;
-    // padding: 5px;
   }
   
   .searchbox .reset,
@@ -32,59 +27,20 @@
   }
   
   .results {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
     background-color: #fff;
     border: 1px solid #ccc;
-    border-top: none;
     border-radius: 0 0 20px 20px; 
-    z-index: 999; 
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  }
-  
-  .results .message {
-    margin-bottom: 10px;
-  }
-  
-  .suggestions,
-  .products {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .suggestions li,
-  .products li {
-    margin-bottom: 10px;
   }
   
   .name {
-    margin-bottom: 5px;
     font-weight: bold;
   }
   
   .price {
-    color: #666;
-  }
-  
-  .cx-visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+    color: #070202;
   }
 
 
 
-  .results{
-    border: solid  1px;
-    border-radius: 15px;
-  }
+ 
   

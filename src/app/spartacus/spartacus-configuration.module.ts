@@ -2,27 +2,10 @@ import { NgModule } from '@angular/core';
 import { translationChunksConfig, translations } from "@spartacus/assets";
 import { FeaturesConfig, I18nConfig, OccConfig, provideConfig, SiteContextConfig } from "@spartacus/core";
 import { defaultCmsContentProviders, layoutConfig, mediaConfig } from "@spartacus/storefront";
-import { address } from 'src/assets/src/translations/en/address';
-import { cart } from 'src/assets/src/translations/en/cart';
-import { common } from 'src/assets/src/translations/en/common';
-import { myAccount } from 'src/assets/src/translations/en/my-account';
-import { payment } from 'src/assets/src/translations/en/payment';
-import { product } from 'src/assets/src/translations/en/product';
-import { user } from 'src/assets/src/translations/en/user';
 
 
-export const translationOverwrites = {
-  en:
-   {
-     common: common,
-     cart: cart,
-     address: address,
-     myaccount: myAccount,
-     user: user,
-     product: product,
-     payment: payment,
-    },
-};
+
+
 
 @NgModule({
   declarations: [],
@@ -45,15 +28,14 @@ export const translationOverwrites = {
         baseSite: ['electronics-spa'],
       },
     }),
-    provideConfig(<I18nConfig>{
-      i18n: {
-        resources: translations,
-        chunks: translationChunksConfig,
-        fallbackLang: 'en'
-      },
-    }),
     provideConfig({
-      i18n: { resources: translationOverwrites },
+      i18n: {
+        backend: {
+          loadPath: 'assets/src/i18n-assets/{{lng}}/{{ns}}.json',
+        },
+        chunks: translationChunksConfig,
+        fallbackLang: 'en',
+      },
     }),
     provideConfig(<FeaturesConfig>{
       features: {
